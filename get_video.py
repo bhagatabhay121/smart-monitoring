@@ -36,7 +36,7 @@ class VideoStream(Image):
 
 class MyApp(App):
     def build(self):
-        return VideoStream(url='http://127.0.0.1:18231/video')
+        return VideoStream(url='http://192.168.250.50:18231/video')
 
 if __name__ == '__main__':
     MyApp().run()

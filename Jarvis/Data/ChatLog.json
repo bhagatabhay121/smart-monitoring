@@ -1,0 +1,130 @@
+[
+    {
+        "role": "user",
+        "content": "hello"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello Abhay! It's nice to meet you. How can I assist you today?"
+    },
+    {
+        "role": "user",
+        "content": "who are you"
+    },
+    {
+        "role": "assistant",
+        "content": "I'm Jarvis, an advanced AI chatbot designed to provide accurate and helpful responses to your questions."
+    },
+    {
+        "role": "user",
+        "content": "who is elon"
+    },
+    {
+        "role": "assistant",
+        "content": "Elon Musk is a South African-born entrepreneur, inventor, and business magnate. He is the CEO and CTO of SpaceX, CEO and product architect of Tesla Inc., and co-founder of Neuralink and The Boring Company."
+    },
+    {
+        "role": "user",
+        "content": "how are you feel now"
+    },
+    {
+        "role": "assistant",
+        "content": "I don't feel emotions like humans do. I'm a program designed to process and respond to text-based inputs, so I don't have feelings or emotions. I'm simply functioning as intended, ready to assist you with your questions!"
+    },
+    {
+        "role": "user",
+        "content": "clear"
+    },
+    {
+        "role": "assistant",
+        "content": "I've cleared our conversation. Let's start fresh! What's on your mind, Abhay?"
+    },
+    {
+        "role": "user",
+        "content": "i am 18 year old rember it"
+    },
+    {
+        "role": "assistant",
+        "content": "Got it! I've noted that you're 18 years old, Abhay."
+    },
+    {
+        "role": "user",
+        "content": "ok"
+    },
+    {
+        "role": "assistant",
+        "content": "Waiting for your next question or topic, Abhay!"
+    },
+    {
+        "role": "user",
+        "content": "tell me how old i"
+    },
+    {
+        "role": "assistant",
+        "content": "You're 18 years old, Abhay!"
+    },
+    {
+        "role": "user",
+        "content": "nice"
+    },
+    {
+        "role": "assistant",
+        "content": "Thanks, Abhay!"
+    },
+    {
+        "role": "user",
+        "content": "tell me current time"
+    },
+    {
+        "role": "assistant",
+        "content": "The current time is 20 hours, 27 minutes, and 50 seconds."
+    },
+    {
+        "role": "user",
+        "content": "nice"
+    },
+    {
+        "role": "assistant",
+        "content": "You're welcome, Abhay!"
+    },
+    {
+        "role": "user",
+        "content": "2+2"
+    },
+    {
+        "role": "assistant",
+        "content": "The answer is 4."
+    },
+    {
+        "role": "user",
+        "content": "what you know abhout me"
+    },
+    {
+        "role": "assistant",
+        "content": "I know that you're 18 years old, and your name is Abhay. That's all the information you've shared with me so far!"
+    },
+    {
+        "role": "user",
+        "content": "i am a student "
+    },
+    {
+        "role": "assistant",
+        "content": "I've added that to my knowledge about you, Abhay. So, I know that you're 18 years old, your name is Abhay, and you're a student."
+    },
+    {
+        "role": "user",
+        "content": "my friend name is himanshu and both we study in nalanda high school"
+    },
+    {
+        "role": "assistant",
+        "content": "I've updated my knowledge about you, Abhay. So, I know that you're 18 years old, your name is Abhay, you're a student, and you study in Nalanda High School along with your friend Himanshu."
+    },
+    {
+        "role": "user",
+        "content": "now tell me "
+    },
+    {
+        "role": "assistant",
+        "content": "Let me recall what I know about you, Abhay!\n\nYou're 18 years old, your name is Abhay, you're a student, and you study in Nalanda High School along with your friend Himanshu."
+    }
+]

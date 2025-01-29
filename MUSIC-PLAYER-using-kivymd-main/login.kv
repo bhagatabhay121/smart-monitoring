@@ -1,0 +1,255 @@
+MDFloatLayout:
+    MDNavigationLayout:
+        ScreenManager:
+            id: screen_manager
+
+            MDScreen:
+                name: "login_screen"
+
+                FitImage:
+                    source: "2.jpg"
+                    size:1,1
+
+                MDLabel:
+                    text: "Welcome To Smart Monitoring"
+                    bold: True
+                    color:1,1,1,1
+                    font_style: "H4"
+                    halign: "center"
+                    pos_hint: {"center_x": 0.5, "center_y": 0.92}
+                    italic: True
+
+                MDCard:
+                    size_hint: None, None
+                    pos_hint:{"center_x":.5,"center_y": .6}
+                    size_hint: 0.8,0.06
+                    opacity: 0.8
+                    elevation: 5
+                    radius: [10,]
+                    border_radius: 10
+
+                    MDIcon:
+                        icon: "account"
+                        pos_hint: {"center_x":.65,"center_y":.5}
+                            
+                    TextInput:
+                        id: username
+                        hint_text: "Enter Username"
+                        hint_text_color:"red"
+                        helper_text: "Enter Valid Username"
+                        size_hint: .9,None
+                        pos_hint:{"center_x": .2,"center_y": .5}
+                        height: self.minimum_height
+                        multiline: False
+                        cursor_color: 0,0,0,1
+                        cursor_width:"2sp"
+                        background_color: 0,0,0,0
+                        padding: 15
+                        font_size: "18sp" 
+                        normal_color: app.theme_cls.bg_light
+                        color_active: app.theme_cls.bg_light
+                        icon_left: "magnify"
+                        foreground_color: app.theme_cls.secondary_text_color
+
+                MDCard:
+                    size_hint: None, None
+                    pos_hint:{"center_x":.5,"center_y": .5}
+                    size_hint: 0.8,0.06
+                    elevation: 3
+                    radius: [10,]
+                    opacity: 0.8
+                    border_radius: 10
+                            
+                    MDIcon:
+                        icon: "lock"
+                        pos_hint: {"center_x":.65,"center_y":.5}
+                    
+                    TextInput:
+                        id: password
+                        hint_text: "Enter Password"
+                        hint_text_color:"red"
+                        helper_text: "Enter Valid Password"
+                        password: True
+                        size_hint: .9,None
+                        pos_hint:{"center_x": .2,"center_y": .5}
+                        height: self.minimum_height
+                        multiline: False
+                        cursor_color: 0,0,0,1
+                        cursor_width:"2sp"
+                        background_color: 0,0,0,0
+                        padding: 15
+                        font_size: "18sp" 
+                        normal_color: app.theme_cls.bg_light
+                        color_active: app.theme_cls.bg_light
+                        icon_left: "magnify"
+                        foreground_color: app.theme_cls.secondary_text_color
+
+            
+                MDCheckbox:
+                    id:check
+                    size_hint: None, None
+                    size: "48dp","48dp"
+                    pos_hint: {"center_x":.11,"center_y":.43}
+                    color: 1,1,1,1
+                    on_active: app.show_password(*args)
+
+                MDLabel:
+                    id: password_text
+                    text: "Show Password"
+                    pos_hint: {"center_x":.64, "center_y":.43}
+                    color:1,1,1,1
+
+                MDSpinner:
+                    id: spinner
+                    size_hint:None,None
+                    size: "48dp","48dp"
+                    active: False
+
+                HoverButton:
+                    text: "Login"
+                    text_color:"white"
+                    font_size: "18sp"
+                    size_hint: .5, .09
+                    bold: True
+                    pos_hint:{"center_x": .5,"center_y": .3}
+                    background_color: 1, 1, 1, 0
+                    color: 1,1,1,1
+                    canvas.before:
+                        Color:
+                            rgb: self.background
+                        RoundedRectangle:
+                            size: self.size
+                            pos: self.pos
+                            radius: [8]
+                    on_release:app.login()
+                    on_release: video_stream.start_stream()
+
+            
+            MDScreen:
+                name:"homepage"
+
+                MDBoxLayout:
+    
+                    MDNavigationRail:
+                        type: "selected"
+                        id: navigation_rail
+                        md_bg_color: "#fffcf4"
+                        selected_color_background: "#e7e4c0"
+                        ripple_color_item: "#e7e4c0"
+
+                        MDNavigationRailMenuButton:
+                            on_release: nav_drawer.set_state("open")
+
+
+                        MDNavigationRailFabButton
+                            icon: "home"
+
+                        MDNavigationRailItem:
+                            text: "Python"
+                            icon: "language-python"
+                            on_press: app.say1()
+
+                        MDNavigationRailItem:
+                            text: "JavaScript"
+                            icon: "language-javascript"
+                            on_press: app.say2()
+
+                        MDNavigationRailItem:
+                            text: "CPP"
+                            icon: "language-cpp"
+                            on_press: app.say3()
+
+                        MDNavigationRailItem:
+                            text: "Swift"
+                            icon: "language-swift"
+                            on_press: app.say4()
+
+
+                    MDRelativeLayout:
+                        
+                
+                        VideoStream:
+
+                            id: video_stream
+                            url: 'http://192.168.250.50:18231/video'  # Replace with your PC's IP
+                            pos_hint:{"center_x": .5,"center_y": .37}
+                            size_hint: 1,.6
+
+                
+                        MDCard:
+                            size_hint: None, None
+                            pos_hint:{"center_x":.5,"center_y": .817}
+                            size_hint: 0.65,0.13
+                            md_bg_color:255/255,128/255,128/255,1
+                            elevation: 3
+                            radius: [10,]
+                            opacity: 0.8
+                            border_radius: 10
+
+                            MDLabel:
+                                text: "  Distance:"
+                                font_size: "18sp"
+                                color: 1, 1, 1, 1
+                                bold: True
+                                pos_hint:{"center_x": .5,"center_y": .5}
+
+                            MDLabel:
+                                text: "Angle:"
+                                font_size: "18sp"
+                                color: 1, 1, 1, 1
+                                bold: True
+                                pos_hint:{"center_x": .65,"center_y": .5}
+
+
+                            
+        MDNavigationDrawer:
+            id: nav_drawer
+            radius: 0, 16, 16, 0
+            md_bg_color: "#fffcf4"
+            elevation: 2
+            width: "240dp"
+
+            MDNavigationDrawerMenu:
+    
+                MDBoxLayout:
+                    orientation: "vertical"
+                    adaptive_height: True
+                    spacing: "12dp"
+                    padding: 0, 0, 0, "12dp"
+
+                    MDIconButton:
+                        icon: "menu"
+
+                    MDBoxLayout:
+                        adaptive_height: True
+                        padding: "12dp", 0, 0, 0
+
+                        ExtendedButton:
+                            text: "Compose"
+                            icon: "pencil"
+
+                DrawerClickableItem:
+                    text: "Python"
+                    icon: "language-python"
+
+                DrawerClickableItem:
+                    text: "JavaScript"
+                    icon: "language-javascript"
+
+                DrawerClickableItem:
+                    text: "CPP"
+                    icon: "language-cpp"
+
+                DrawerClickableItem:
+                    text: "Swift"
+                    icon: "language-swift"
+                
+<ExtendedButton>
+    elevation: 1
+    shadow_radius: 12
+    -height: "56dp"
+
+
+<DrawerClickableItem@MDNavigationDrawerItem>
+    focus_color: "#e7e4c0"
+    unfocus_color: "#fffcf4"

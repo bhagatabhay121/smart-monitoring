@@ -1,0 +1,145 @@
+
+MDScreen:
+    MDFloatLayout:
+
+        MDLabel:
+            id: header
+            font_size: "20sp"
+            color: "yellow"
+            text: "Tic Tac Toe"
+            halign: "center"
+            pos_hint: {"center_y": .95 }
+
+        MDLabel:
+            id: copyright
+            font_size: "14sp"
+            color: "yellow"
+            text: "Created by Abhay Bhagat"
+            halign: "center"
+            pos_hint: {"center_y": .9 }
+
+        # create the gamefield
+        MDGridLayout:
+            id: gameField
+            size_hint: .75,.5
+            pos_hint: {'center_x': .5, 'center_y': .6}
+            cols: 3
+            rows: 3
+            opacity: 1
+
+            #create the buttons for X or O
+            Button:
+                id: btn1
+                text:''
+                font_size: "45sp"
+                background_color: "green"
+                on_release: app.presser(btn1)
+                elevation: 6
+            
+            Button:
+                id: btn2
+                text:''
+                font_size: "45sp"
+                background_color: "green"
+                on_release: app.presser(btn2)
+                elevation: 6
+
+            Button:
+                id: btn3
+                text:''
+                font_size: "45sp"
+                background_color: "green"
+                on_release: app.presser(btn3)
+                elevation: 6
+
+            Button:
+                id: btn4
+                text:''
+                font_size: "45sp"
+                on_release: app.presser(btn4)
+                background_color: "green"
+                elevation: 6
+
+            Button:
+                id: btn5
+                text:''
+                font_size: "45sp"
+                on_release: app.presser(btn5)
+                background_color: "green"
+                elevation: 6
+
+            Button:
+                id: btn6
+                text:''
+                font_size: "45sp"
+                on_release: app.presser(btn6)
+                background_color: "green"
+                elevation: 6
+
+            Button:
+                id: btn7
+                text:''
+                font_size: "45sp"
+                on_release: app.presser(btn7)
+                background_color: "green"
+                elevation: 6
+
+            Button:
+                id: btn8
+                text:''
+                font_size: "45sp"
+                on_release: app.presser(btn8)
+                background_color: "green"
+                elevation: 6
+
+            Button:
+                id: btn9
+                text:''
+                font_size: "45sp"
+                on_release: app.presser(btn9)
+                background_color: "green"
+                elevation: 6
+        
+        # create the score label
+        MDLabel:
+            id: score
+            font_size: "18sp"
+            text: "X goes first!"
+            halign: "center"
+            pos_hint: {"center_y": .25 }
+        
+        MDBoxLayout:
+            orientation: 'horizontal'
+            adaptive_size: True
+            spacing: '3sp'
+            padding: ('3sp', '3sp', '3sp', '3sp')
+            pos_hint: {"center_x": .5}
+            MDRaisedButton:
+                id: restart
+                font_size: "12sp"
+                text: "Restart Game"
+                on_release: app.restart()
+            
+            MDRaisedButton:
+                id: resetScore
+                font_size: "12sp"
+                text: "Reset Score"
+                #pos_hint: {'center_x': .65, 'center_y': .15}
+                on_release: app.reset_score()
+            
+            MDRaisedButton:
+                id: exit
+                font_size: "12sp"
+                text: "Exit Game"
+                #pos_hint: {'center_x': .65, 'center_y': .15}
+                on_release: app.exit_game()
+
+        MDLabel:
+            id: game
+            font_size: "16sp"
+            color: "grey"
+            text: "X-Wins: 0 | O-Wins: 0"
+            halign: "center"
+            pos_hint: {"center_x": .5, "center_y": .325 }
+            
+

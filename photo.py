@@ -7,13 +7,13 @@ firebase = firebase.FirebaseApplication("https://abhay-121-default-rtdb.firebase
 
 # Convert Image to JSON
 
-#with open("2.jpg", "rb") as image_file:
- #   image_bytes = image_file.read()
-#image_base64 = base64.b64encode(image_bytes).decode('utf-8')
-#image_json = json.dumps(image_base64)
-#data = {
- #   "image": image_json
-#}
+with open("2.jpg", "rb") as image_file:
+    image_bytes = image_file.read()
+image_base64 = base64.b64encode(image_bytes).decode('utf-8')
+image_json = json.dumps(image_base64)
+data = {
+    "image": image_json
+}
 
 res = firebase.get("abhay-121-default-rtdb/Users/photo", "")
 for i in res.keys():
